@@ -5,4 +5,8 @@ import java.util.Map;
 
 public interface OrganizationProcessor {
     Map<String, Integer> process(List<Organization> organizations);
+
+    interface EmployeeProcessor {
+        List<Double> process(List<Organization> organizations);
+    }
 }

@@ -11,4 +11,6 @@ public class CountryOrganizationProcessor implements OrganizationProcessor {
         return organizations.stream()
                 .collect(Collectors.toMap(Organization::getCountry, v->1, Integer::sum));
     }
+
+
 }
