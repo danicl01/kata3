@@ -9,15 +9,14 @@ public class Main {
         OrganizationLoader loader = new TsvFileOrganizationLoader(new File("dataset.tsv"));
         List<Organization> organizations = loader.load();
         Map<String, Integer> barchart = new CountryOrganizationProcessor().process(organizations);
+
         /*
         for(String key: barchart.keySet()) {
             System.out.println(key + "=" + barchart.get(key));
         }
 
          */
-        List<Double> employee = new EmployeeOrganizationProcessor().process(organizations);
 
-        MainFrame frame = new MainFrame();
-        frame.setVisible(true);
+        List<Double> employees = new EmployeeOrganizationProcessor().process(organizations);
     }
 }
