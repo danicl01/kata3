@@ -18,5 +18,7 @@ public class Main {
          */
 
         List<Double> employees = new EmployeeOrganizationProcessor().process(organizations);
+        MainFrame frame = new MainFrame();
+        frame.setVisible(true);
     }
 }
