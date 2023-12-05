@@ -18,7 +18,9 @@ public class Main {
          */
 
         List<Double> employees = new EmployeeOrganizationProcessor().process(organizations);
+        Histogram histogram = new Histogram(1000, employees);
         MainFrame frame = new MainFrame();
+        frame.histogramDisplay.show(histogram);
         frame.setVisible(true);
     }
 }

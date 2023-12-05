@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class MainFrame extends JFrame {
 
+    public HistogramDisplay histogramDisplay;
     public MainFrame() throws HeadlessException {
         setSize(800, 600);
         setTitle("Histogram - employee range 0 - 10k");
@@ -15,5 +16,11 @@ public class MainFrame extends JFrame {
 
     private Component createHistogramDisplay() {
         JFreeHistogramDisplay display = new JFreeHistogramDisplay();
+        histogramDisplay = display;
+        return display;
+    }
+
+    public HistogramDisplay getHistogramDisplay() {
+        return histogramDisplay;
     }
 }
