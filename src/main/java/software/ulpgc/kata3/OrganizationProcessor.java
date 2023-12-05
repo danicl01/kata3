@@ -6,7 +6,7 @@ import java.util.Map;
 public interface OrganizationProcessor {
     Map<String, Integer> process(List<Organization> organizations);
 
-    interface EmployeeProcessor {
+    interface EmployeeOrganizationProcessor {
         List<Double> process(List<Organization> organizations);
     }
 }
